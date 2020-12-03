@@ -1,0 +1,26 @@
+<!-- /*
+    If you want to have a script run on some event, such as when a 
+    user clicks somewhere, then you will place that script in the 
+    head as follows
+
+    se a instrucao alert("Hello World") fica no body, a alerta é 
+    acionada cada vez que a pagina é carregada
+*/ -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type = "text/javascript">
+
+        function sayHello(){
+            alert("Hello World")
+        }
+
+        </script>
+    </head>
+
+    <body>
+        <input type = "button" onclick = "sayHello()" value = "Say Hello"/>
+        <!-- <input type = "button" onclick = "alert("Hello World")" value = "Say Hello"/> -->
+    </body>
+</html>

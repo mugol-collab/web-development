@@ -1,0 +1,24 @@
+<!-- As you begin to work more extensively with JavaScript, you will 
+be likely to find that there are cases where you are reusing 
+identical JavaScript code on multiple pages of a site.
+
+You are not restricted to be maintaining identical code in 
+multiple HTML files. The script tag provides a mechanism to 
+allow you to store JavaScript in an external file and then 
+include it into your HTML files.
+
+Here is an example to show how you can include an external 
+JavaScript file in your HTML code using script tag and its 
+src attribute. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type = "text/javascript" src = "index.js">
+        </script>
+    </head>
+
+    <body>
+        <input type = "button" onclick = "sayHello()" value = "alert button"/>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!--
+
+    The continue Statement
+    
+    The continue  statement tells  the interpreter  to 
+    immediately start the next  iteration  of the loop 
+    and skip the remaining code block. 
+    
+    When a c ontinue  statement is encountered, the  
+    program flow moves to the loop check expression  
+    immediately  (Cuando se encuentra una instrucción 
+    continue, el flujo del programa se mueve a la 
+    expresión de verificación del ciclo inmediatamente) 
+    and if  the condition remains true, then it starts 
+    the next  iteration, otherwise the  control comes 
+    out of the loop.
+
+    Example
+    
+    This example illustrates the use of a continue 
+    statement with a  while  loop.  Notice how the 
+    continue  statement  is  used to skip printing 
+    when the index held in variable x reaches 5
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            continue statement
+        </title>
+    </head>
+    <body>
+        <p>### continue statement ###</p>
+        <script type = "text/javascript">
+            <!--
+              
+                var x = 1;
+                document.write("Entering the loop <br />");
+
+                while (x < 10){
+                    x = x + 1;
+
+                    if (x == 5){
+                        continue;
+                    }
+                    document.write(x + "<br />");
+                }
+                document.write("Exiting the loop!<br /> ");
+                
+            //-->
+        </script>
+
+    </body>
+</html>

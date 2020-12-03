@@ -1,0 +1,52 @@
+<!--
+
+    JavaScript provides full control to handle loops 
+    and switch statements. There may be a situation 
+    when you need to come out of a loop without 
+    reaching its bottom
+
+    The break Statement
+    
+    The break statement, which was briefly introduced 
+    with the switch statement, is used to exit a loop 
+    early, breaking out of the enclosing curly braces.
+
+    Example
+    
+    The following example illustrates the use of a 
+    break statement with a while loop. Notice how 
+    the loop breaks out early once x reaches 5 and 
+    reaches to document.write (..) statement just 
+    below to the closing curly brace
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>break statement</title>
+    </head>
+    <body>
+        <p>### break statement###</p>
+        <script type = "text/javascript">
+
+            <!--
+              
+                var x = 1;
+                document.write("Entering the loop<br />");
+
+                while (x < 20){
+                    if (x == 5){
+                        break;      // breaks out of loop completely
+                    }
+                    x = x + 1;
+                    document.write(x + "<br />");
+                }
+                document.write("Exiting the loop!<br /> ");
+               
+            //-->
+
+        </script>
+
+    </body>
+</html>
