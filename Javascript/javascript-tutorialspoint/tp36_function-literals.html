@@ -1,0 +1,58 @@
+<!--
+
+    JavaScript Function Literals
+
+    A function literal is an expression 
+    that defines an unnamed function.
+
+    Syntax
+
+    The syntax for a function literal is much like a 
+    function statement, except that it is used as an 
+    expression rather than a statement and no function 
+    name is required.
+
+    <script type = "text/javascript">
+      var variablename = function(Argument List) {
+         Function Body 
+      };
+    </script>
+
+    Syntactically, you can specify a function name while 
+    creating a literal function as follows.
+
+    <script type = "text/javascript">
+      var variablename = function FunctionName(Argument List) {
+         Function Body
+      };
+    </script>
+
+    But this name does not have any significance, so it is 
+    not worthwhile
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type = "text/javascript">
+            
+            var func = function(x,y){
+                return x * y
+            };
+
+            function secondFunction(){
+                var result;
+                result = func(10,20);
+                document.write(result);
+            }
+
+        </script>
+    </head>
+    <body>
+        <p>Click the following button to call the function</p>
+        <form>
+            <input type = "button" onclick = "secondFunction()" value = "Call Function">
+        </form>
+    </body>
+</html>

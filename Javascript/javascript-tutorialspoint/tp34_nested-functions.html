@@ -1,0 +1,45 @@
+<!--
+
+    JavaScript - Nested Functions
+
+    Prior to JavaScript 1.2, function definition was allowed 
+    only in top level global code, but JavaScript 1.2 allows 
+    function definitions to be nested within other functions 
+    as well. Still there is a restriction that function 
+    definitions may not appear within loops or conditionals. 
+    These restrictions on function definitions apply only to 
+    function declarations with the function statement.
+
+    As we'll discuss later in the next chapter, function 
+    literals (another feature introduced in JavaScript 1.2) 
+    may appear within any JavaScript expression, which means 
+    that they can appear within if and other statements.
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <Script type = "text/javascript">
+
+            function hypotenuse(a, b){
+                function square(x){ return x*x }
+                return Math.sqrt(square(a) + square(b));
+            }
+
+            function secondFunction(){
+                var result;
+                result = hypotenuse(1, 2);
+                document.write(result);
+            }
+
+        </Script>
+    </head>
+    <body>
+        <p>Click the following button to call the function</p>
+
+        <form>
+            <input type = "button" onclick = "secondFunction()" value = "Call Function">
+        </form>
+    </body>
+</html>

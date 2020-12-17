@@ -1,0 +1,28 @@
+<!--
+
+    Function Parameters
+
+    Till now, we have seen functions without parameters. 
+    But there is a facility to pass different parameters 
+    while calling a function. These passed parameters can 
+    be captured inside the function and any manipulation 
+    can be done over those parameters. A function can take 
+    multiple parameters separated by comma.
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type = "text/javascript">
+            function sayHello(name, age){
+                document.write(name + " is " + age + " years old.");
+            }
+        </script>
+    </head>
+    <body>
+        <p>Click the following button to call the function</p>
+        <form>
+            <input type = "button" onclick = "sayHello('Zara', 7)" value = "Say Hello">
+        </form>
+    </body>
+</html>
