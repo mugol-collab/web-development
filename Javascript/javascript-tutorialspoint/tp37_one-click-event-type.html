@@ -1,0 +1,34 @@
+<!--
+
+    JavaScript - Events
+
+    JavaScript's interaction with HTML is handled through 
+    events that occur when the user or the browser 
+    manipulates a page.
+
+    onclick Event Type
+
+    This is the most frequently used event type which 
+    occurs when a user clicks the left button of his 
+    mouse. You can put your validation, warning etc., 
+    against this event type.
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type = "text/javascript">
+
+            function sayHello(){
+                alert("Hello World")
+            }
+
+        </script>
+    </head>
+    <body>
+        <p>Click the following button and see result</p>
+        <form>
+            <input type = "button" onclick = "sayHello()" value = "Say Hello">
+        </form>
+    </body>
+</html>
