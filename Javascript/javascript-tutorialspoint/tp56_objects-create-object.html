@@ -1,0 +1,96 @@
+<!--
+    Javascript es un lenguaje de programación orientado a 
+    objetos (OOP), pues proporciona cuatro (4) capacidades
+    basicas a lso programadores:
+
+  - Encapsulamiento: la capacidad de almacenar información 
+    relacionada, ya sean datos o métodos, juntos en un objeto.
+
+  - Agregación: la capacidad de almacenar un objeto dentro de 
+    otro objeto.
+
+  - Herencia: la capacidad de una clase de depender de otra 
+    clase (o número de clases) para algunas de sus propiedades 
+    y métodos.
+ 
+  - Polimorfismo: la capacidad de escribir una función o 
+    método que funciona en una variedad de formas diferentes.
+
+    Los objetos se componen de atributos. Si un atributo 
+    contiene una función, se considera un método del objeto; 
+    de lo contrario, el atributo se considera una propiedad.
+
+    Propiedades del objeto
+
+    Las propiedades del objeto pueden ser cualquiera de los 
+    tres tipos de datos primitivos o cualquiera de los tipos 
+    de datos abstractos, como otro objeto. 
+    
+    Las propiedades del objeto suelen ser variables que se 
+    utilizan internamente en los métodos del objeto, pero 
+    también pueden ser variables visibles globalmente que se 
+    utilizan en toda la página.
+
+    The syntax for adding a property to an object is:
+    
+    objectName.objectProperty = propertyValue;
+
+    Métodos de objetos
+    
+    Los métodos son las funciones que permiten que el objeto 
+    haga algo o que le hagan algo. Existe una pequeña 
+    diferencia entre una función y un método: en una función 
+    hay una unidad independiente de declaraciones y un método 
+    se adjunta a un objeto y se puede hacer referencia a él 
+    mediante la palabra clave this.
+
+    Los métodos son útiles para todo, desde mostrar el 
+    contenido del objeto en la pantalla hasta realizar 
+    operaciones matemáticas complejas en un grupo de 
+    propiedades y parámetros locales.
+
+    Objetos definidos por el usuario
+    
+    Todos los objetos definidos por el usuario y los objetos 
+    integrados son descendientes de un objeto llamado Objeto.
+
+  - El operador new
+
+    El operador new se utiliza para crear una instancia de un 
+    objeto. 
+    
+    Para crear un objeto, el operador new es seguido 
+    por el método constructor.
+
+    En el ejemplo, el constructor es Object()
+
+  - El constructor Object()
+
+    Un constructor es una función que crea e inicializa un 
+    objeto. JavaScript proporciona una función de constructor 
+    especial llamada Object () para construir el objeto. 
+    El valor de retorno del constructor Object () se asigna a 
+    una variable.
+
+    La variable contiene una referencia al nuevo objeto. Las 
+    propiedades asignadas al objeto no son variables y no 
+    están definidas con la palabra clave var.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User-defined objects</title>
+        <script type = "text/javascript">
+            var book = new Object();        //create the object
+            book.subject = "Perl";
+            book.author = "Mohtashim";
+        </script>
+    </head>
+    <body>
+        <script type = "text/javascript">
+            document.write("Book name is: " + book.subject + "<br>");
+            document.write("Book author is : " + book.author + "<br>");
+        </script>
+    </body>
+</html>
