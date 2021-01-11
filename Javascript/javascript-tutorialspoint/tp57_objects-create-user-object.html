@@ -1,0 +1,29 @@
+<!--
+
+    Este ejemplo demuestra cómo crear un objeto con una 
+    función definida por el usuario. 
+    Aquí, la palabra clave this se utiliza para hacer 
+    referencia al objeto que se ha pasado a una función.
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User-defined objects</title>
+        <script type = "text/javascript">
+            function book(title, author){
+                this.title = title;
+                this.author = author;
+            }
+        </script>
+    </head>
+
+    <body>
+        <script type = "text/javascript">
+            var myBook = new book("Perl", "Mohtashim");
+            document.write("Book title is: " + myBook.title + "<br>");
+            document.write("Book author is: " + myBook.author + "<br>");
+        </script>
+    </body>
+</html>
