@@ -7,7 +7,8 @@ app.get('/', (req, res) => {
 });
 
 // endpoint que testa a saude do servidor
-app.get('/api/servidor', (req, res) => {
+// app.get('/api/servidor', (req, res) => {
+app.get('/api/gate/v2/people/futronic_data.json', (req, res) => {
     let j = {};
     let cpf = req.query.cpf;
     let acessoLiberado = false;
@@ -50,8 +51,8 @@ app.get('/api/servidor', (req, res) => {
     "photo_url":"${foto}", "system_message":"${sysMsg + " " + nome}", "id":"${id}", 
      "birthday":"0000-00-00", "name": "${nome}", "authentication_password": "ADFRG", 
      "password_acess": "${usarSenha}", "serial_number_found": "${nsValido}", 
-     "access_control_device_quantity":${qtdAcessos}, "serial_number":"123456789",
-     "cpf": "${cpf}"}`);
+     "access_control_device_quantity":${qtdAcessos}, "numero de acessos": ${numAcessos}, 
+     "serial_number":"123456789", "cpf": "${cpf}"}`);
     // res.send('cpf: ' + cpf);
     res.send(j);
     console.log("Respuesta: " + JSON.stringify(j));
