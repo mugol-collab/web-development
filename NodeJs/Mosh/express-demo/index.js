@@ -31,12 +31,60 @@
 const express = require('express');
 const app = express();
 
+app.use(express.json());
+
+const courses = [
+  { id: 1, name: 'course1' },
+  { id: 2, name: 'course2' },
+  { id: 3, name: 'course3' } 
+];
+
 app.get('/', (req, res) => {
      res.send('Hello World');
 });
 
 app.get('/api/courses', (req, res) => {
-    res.send([1, 2, 3]);
+    res.send(courses);
 });
 
-app.listen(3020, () => console.log('Listening on port 3020...'));
+app.post('/api/courses', (req, res) => {
+    if (!req.body.name || req.body.name.length < 3){
+      // 400 Bad Request
+      res.status(400).send('Name is required and should be minimum 3 characters');
+      return;
+    }
+
+    /** para crear cursos 1ro se debe leer el objeto 'course' el cual debe 
+     *  estar en el cuerpo de la request, usar sus propiedades para crear 
+     *  un nuevo objeto courses, y después agregar ese objeto course al
+     *  arreglo courses
+     */
+    const course = {  // creación del objeto course
+      id: courses.length + 1,   // el id se agrega manual, incrementando el # de elementos del array (generalmente el id se asigna de la base de datos)
+      name: req.body.name
+    };
+    courses.push(course);
+    res.send(course);
+});
+
+app.get('/api/courses/:id', (req, res) =>{
+  // res.send(req.params.id);
+  const course = courses.find(c => c.id === parseInt(req.params.id));
+
+  if (!course)  {
+    res.status(404).send('The course with the given id was not found'); // 404
+  }
+  res.send(course);
+});
+
+
+
+// app.get('/api/posts/:year/:month', (req, res) => {
+//   // res.send(req.params);
+//     res.send(req.query);
+// });
+ 
+// PORT environment variable
+const port = process.env.PORT || 3020;
+
+app.listen(port, () => console.log(`Listening on port ${port}...`));
