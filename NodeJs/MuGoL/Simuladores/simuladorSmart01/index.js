@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 
+app.use(express.json());    // Habilita parsing objetos JSON en el cuerpo de la request
+
 app.get('/', (req, res) => {
     res.send('Simulador SmartFit');
 });
@@ -9,6 +11,7 @@ app.get('/', (req, res) => {
 // endpoint que testa a saude do servidor
 // app.get('/api/servidor', (req, res) => {
 app.get('/api/gate/v2/people/futronic_data.json', (req, res) => {
+    console.log('recebido: ' + req.url);
     let j = {};
     let cpf = req.query.cpf;
     let acessoLiberado = false;
@@ -18,7 +21,7 @@ app.get('/api/gate/v2/people/futronic_data.json', (req, res) => {
     let nsValido = true;
     let nome = "CPF inexistente";
     let fingerTemplate = "";
-    let fotoTemplate = "";
+    let foto = "";
     let sysMsgOk = "Acesso Liberado, Bem vindo";
     let sysMsgBlock = "Acesso Bloqueado, por favor procure a recepcao";
     let sysMsg = "";
@@ -46,13 +49,13 @@ app.get('/api/gate/v2/people/futronic_data.json', (req, res) => {
         id = 2;
     }
 
-    j = JSON.parse(`{"access_device_status": ${acessoLiberado}, "access_control_type":"${grupo}", 
+    j = JSON.parse(`{"person":{"access_control_device_status": ${acessoLiberado}, "access_control_type":"${grupo}", 
     "plan_name":"VIP Colaborador", "futronic_fingerprint_template":["${fingerTemplate}"], 
     "photo_url":"${foto}", "system_message":"${sysMsg + " " + nome}", "id":"${id}", 
      "birthday":"0000-00-00", "name": "${nome}", "authentication_password": "ADFRG", 
      "password_acess": "${usarSenha}", "serial_number_found": "${nsValido}", 
      "access_control_device_quantity":${qtdAcessos}, "numero de acessos": ${numAcessos}, 
-     "serial_number":"123456789", "cpf": "${cpf}"}`);
+     "serial_number":"123456789", "cpf": "${cpf}"}}`);
     // res.send('cpf: ' + cpf);
     res.send(j);
     console.log("Respuesta: " + JSON.stringify(j));
