@@ -28,6 +28,7 @@
    { name: ''}                          { id: 1, name: ''}
  *  
  */
+const Joi = require('joi');
 const express = require('express');
 const app = express();
 
@@ -48,9 +49,16 @@ app.get('/api/courses', (req, res) => {
 });
 
 app.post('/api/courses', (req, res) => {
-    if (!req.body.name || req.body.name.length < 3){
+    const schema = {
+        name: Joi.string().min(3).required()
+    };
+
+    const result = Joi.validate(req.body, schema);
+    // console.log(result);
+
+    if (result.error){
       // 400 Bad Request
-      res.status(400).send('Name is required and should be minimum 3 characters');
+      res.status(400).send(result.error);
       return;
     }
 
@@ -65,6 +73,18 @@ app.post('/api/courses', (req, res) => {
     };
     courses.push(course);
     res.send(course);
+});
+
+// update resources
+app.put('/api/courses/:id', (req, res) => {
+    // Look up the course
+    // if not existing, return 404
+
+    // Validate
+    // If invalid, return 400 - Bad request
+
+    // Update course
+    //Return the updated course
 });
 
 app.get('/api/courses/:id', (req, res) =>{
