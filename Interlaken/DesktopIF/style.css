@@ -1,0 +1,1135 @@
+/* Global font-size for responsive design */
+@font-face {
+    font-family: GothamBold;
+    src: url("./fonts/Gotham-Bold.otf");
+  }
+  
+  @font-face {
+    font-family: GothamBlack;
+    src: url("./fonts/Gotham-Black.otf");
+  }
+  
+  @font-face {
+    font-family: GothamBlackIta;
+    src: url("./fonts/Gotham-BlackIta.otf");
+  }
+  
+  @font-face {
+    font-family: GothamMedium;
+    src: url("./fonts/Gotham-Medium.otf");
+  }
+  
+  @font-face {
+    font-family: GothamMediumIta;
+    src: url("./fonts/Gotham-MediumIta.otf");
+  }
+  
+  @font-face {
+    font-family: GothamUltraIta;
+    src: url("./fonts/Gotham-UltraIta.otf");
+  }
+  
+  @font-face {
+    font-family: GothamUltra;
+    src: url("./fonts/Gotham-Ultra.otf");
+  }
+  /*
+    Resolucao padrao de 1024x768
+  */
+  
+  /********* ****REVISADOS***** ********* */
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  body {
+    /* font-size: 10px; */
+    /* font-size: 15px; */
+    font-size:2vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-font-smoothing:antialiased !important;
+    font-family: GothamMedium;
+    /* text-rendering: optimizeLegibility; */
+  }
+  
+  video::-webkit-media-controls {
+    display: none;
+  }
+  
+  section {
+    /* background-color: red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .common-border {
+    border-radius: 10px; 
+  }
+  
+  #btnConfigCLEAR {
+    font-size: 2.5em;
+  }
+  /*** <HEADER> ***/
+  .header {
+    /* background-color: aquamarine; */
+    height: 15%;
+    padding-left: 10;
+    padding-right: 20;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .headerLeft {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    height: 100%;
+    color:red
+  }
+  .headerLeft img {
+    margin:4;
+    object-fit: contain;
+    width: 100%;
+    /* background-color: lightcoral; */
+  }
+  
+  .backButton {
+    /* display: block; */
+    display: none;
+    margin:0.2em;
+    text-align: center;
+    border-radius: 10px;
+    background-color: black;
+    border:0;
+    outline: none;
+    width: 100px;
+  }
+  
+  .headerCenter {
+    /* background-color:gray; */
+    flex:1;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .headerCenter img {
+    position:absolute;
+    max-height: 13%;
+    max-width: 13%;
+    top:1%;
+    left: 46%;
+  }
+  .headerRight {
+    /* background-color: blue; */
+    display: flex;
+  }
+  
+  #camera {
+    max-height: 13%;
+  }
+  
+  .cameraFlash {
+    content: url("./img/dslr-camera-06.png");
+  }
+  /*tem que exibir o indicator*/
+  .cameraProcessing {
+    content: url("./img/dslr-camera-02.png");
+    background: url("./img/Spinner-1s-210px.gif") no-repeat;
+    background-size: 100% 100%;
+  }
+  .cameraNotIdentify {
+    content: url("./img/dslr-camera-03.png");
+  }
+  .cameraOffline {
+    content: url("./img/cameraOff.png");
+  }
+  .cameraEnable {
+    content: url("./img/camera.png");
+    /* background-color: red; */
+    
+  }
+  .cameraDisable {
+    background: #333;
+  }
+  .cameraStarted {
+    content: url("./img/camera.png");
+  }
+  .cameraStopped {
+    content: url("./img/cameraCinza.png");
+  }
+  
+  .accessDeviceFinger {
+    content: url("./img/fingerprint.png");
+  }
+  
+  .accessDeviceKeyboard {
+    content: url("./img/keyboard.png");
+  }
+  
+  .accessDeviceCamera {
+    content: url("./img/camera.png");
+  }
+  
+  /*revisado*/
+  .appName {
+    right: 310; 
+    color: white;
+    text-align: right;
+    font-size: 2.9em;
+    margin-right: 5;
+  }
+  /*revisado*/
+  .IntegraFacil {
+    right: 20; 
+    text-align: right;
+    font-size: 2.9em;
+  }
+  
+  /*revisado*/
+  .appVersion {
+    color: white;
+    text-align: right;
+    font-size: 0.6em;
+  }
+  /*** </HEADER> ***/
+  
+  /*** <CONTAINER> ***/
+  #pages {
+    /* background-color: deeppink; */
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin:8;
+  }
+  
+  /*revisado*/
+  .tab-page {
+    /* background-color: blue; */
+    display: flex;
+    flex:1;
+    margin-top: 12;
+    /* padding:8; */
+  }
+  
+  .sub-page {
+    /* background-color: yellowgreen; */
+    display: flex;
+    flex:1;
+    /* margin-top: 12; */
+    /* padding:8; */
+  }
+  /* #region tabOffline*/
+  #tabOffline {
+    border: 0.04em red solid;
+    color: red;
+    font-size: 4em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: darksalmon; */
+  }
+  /*revisado*/
+  #msgOffline {
+    /* background-color: deepskyblue; */
+    text-align: center;
+  }
+  /* #endregion tabOffline*/
+  
+  /* #region tabIdentify*/
+  #tabIdentify {
+    /* background-color: lightgreen; */
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #tabIdentify aside {
+    display: flex;
+    flex-direction: column;
+    /* background: chocolate; */
+    margin-bottom: 8;
+    margin-right: 8;
+    width: 30%;
+  }
+  
+  #identifyBottomMsg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 15%;
+    font-size: 1.8em;
+    margin-bottom:12;
+  }
+  
+  #tabIdentify content {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background: chocolate; */
+    margin-left: 8;
+  }
+  
+  
+  
+  .display-container {
+    height: 6.5em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    /* background: lightpink; */
+    margin-bottom: 8;
+    /* margin-left:12;
+    margin-right: 12; */
+  }
+  /*revisado*/
+  .display {
+    font-weight: bold;
+    font-size: 3.5em;
+    color: white;
+    /* background: lightgreen; */
+  }
+  
+  /*revisado*/
+  .touchpad {
+    /* margin-top:4; */
+    margin-bottom:12;
+    /* background: chartreuse; */
+    display: flex;
+    flex-direction: column;
+    flex:1;
+  }
+  
+  .touchpadRow{
+    /* background: coral; */
+    display: flex;
+    flex-direction: row;
+    flex:1;
+  }
+  
+  .touchpadRow button {
+    /* margin:8; */
+    margin: 0.2em;
+    /* margin: 0.2em 0.2em 0 0; */
+    /* margin-top:0.3em; */
+    text-align: center;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 3.7em;
+    font-family: GothamBlack;
+    outline: none;
+    flex:1;
+  } 
+  
+  .touchpadRow :first-child {
+    margin-left: 0 !important;
+  }
+  
+  .touchpadRow :last-child {
+    margin-right: 0 !important;
+  }
+  
+  
+  .panel {
+    /* margin:8; */
+    margin:0.2em;
+    background-color: black;
+    color: white;
+    font-size: 2.5em;
+    font-family: GothamBlack;
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } 
+  
+  #msgBottom {
+    font-size: 5em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    padding: 0.2em;
+  }
+  
+  #tryagain {
+    /* background-color: lightgreen; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #querying {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20;
+  }
+  
+  #queryingMsg {
+    display: flex;
+    color: white;
+    font-size: 3.5em;
+    text-align: center;
+    /* background-color: blue; */
+    justify-content: center;
+    margin: 8;
+  }
+  
+  /* #tryagain {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
+  
+  /* .tryAgainPanel {
+    flex:1;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .tryAgainPanel aside {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8;
+    width: 30%;
+  } */
+  
+  #tabSuccessfullyIdentified {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightgreen; */
+    color:white;
+    font-size: 4em;
+  }
+  
+  #tabQueryingUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightgreen; */
+    color:white;
+    font-size: 4em;
+  }
+  
+  .fingerprintImage {
+    display: none;
+    flex:1;
+    height: 100%;
+    /* background-color: red; */
+    width: auto;
+    object-fit: contain;
+  }
+  
+  #msgTryAgain {
+    display: flex;
+    color: white;
+    font-size: 3.5em;
+    text-align: center;
+    /* background-color: blue; */
+    justify-content: center;
+    margin-bottom: 8;
+  }
+  
+  #imgKeepFinger {
+    height: 50%;
+    /* background-color: red; */
+    width: auto;
+    object-fit: contain;
+  }
+  
+  /* #endregion tabIdentify*/
+  
+  
+  /* #region tabIdentify*/
+  
+  .fingerprint {
+    flex:1;
+    display: flex;
+    flex-direction: column; 
+    /* padding:8; */
+    margin-bottom: 20;
+    /* background-color: lawngreen; */
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .fingerprint :nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+  }
+  
+  #videoPlayer {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    margin:0;
+    display:none;
+  }
+  
+  .finger-quality {
+    /* background-color: hotpink; */
+    /* bottom: 5px; */
+    height: 10px;
+    width: 100%;
+    /* /*position: absolute;*/ 
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .finger-level{
+    height: 100%;
+    margin: 2px;
+    flex:1;
+  }
+  
+  #finger-quality-level-1{
+    background-color: red;
+  }
+  #finger-quality-level-2{
+    background-color: red;
+  }
+  #finger-quality-level-3{
+    background-color: red;
+  }
+  
+  #finger-quality-level-4{
+    background-color: #FCAD43;
+  }
+  #finger-quality-level-5{
+    background-color: #FCAD43;
+  }
+  #finger-quality-level-6{
+    background-color: #FCAD43;
+  }
+  
+  #finger-quality-level-7{
+    background-color: #00FF40;
+  }
+  #finger-quality-level-8{
+    background-color: #00FF40;
+  }
+  #finger-quality-level-9{
+    background-color: #00FF40;
+  }
+  
+  /* #endregion fingerprint*/
+  
+  
+  /* #region tabDedos */
+  #fingers {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #msgDedos {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+  }
+  
+  .handsContainer {
+    background-color: lightsteelblue;
+    display: flex;
+    margin-top:32px;
+  }
+  
+  /* #region imagens Mao e Dedos*/
+  
+  .imgCircDedo {
+    height: 5.7em;
+    width: 5.7em;
+  }
+  
+  .Mao {
+    height: 35%;
+    bottom:25%;
+    position: absolute;
+    /* background-color:lightgreen  */
+  }
+  /* #region Mao Esquerda */
+  #imgMaoEsq {
+    /* background-color: lightgreen; */
+    left: 40%;
+  }
+  
+  #imgMaoDir {
+    right: 10%;
+    /* background-color: aqua; */
+  }
+  
+  #imgCircDedo1 {
+    position: absolute;
+    top:44.5%;
+    left: 38.5%
+  }
+  
+  #imgCircDedo2 {
+    position: absolute;
+    top:39.5%;
+    left: 41.7%
+  }
+  
+  #imgCircDedo3 {
+    position: absolute;
+    top:37.5%;
+    left: 45.2%
+  }
+  
+  #imgCircDedo4 {
+    position: absolute;
+    top:40.5%;
+    left: 49.7%
+  }
+  
+  #imgCircDedo5 {
+    position: absolute;
+    top:50%;
+    left: 54%
+  }
+  /* #endregion */
+  /* #region Mao Direita */
+  
+  #imgCircDedo6 {
+    position: absolute;
+    top:50%;
+    right: 24%
+  }
+  
+  #imgCircDedo7 {
+    position: absolute;
+    top:40.5%;
+    right: 19.7%
+  }
+  
+  #imgCircDedo8 {
+    position: absolute;
+    top:37.5%;
+    right: 15.2%
+  }
+  
+  #imgCircDedo9 {
+    position: absolute;
+    top:39.5%;
+    right: 11.7%
+  }
+  
+  #imgCircDedo10 {
+    position: absolute;
+    top:44.5%;
+    right: 8.5%
+  }
+  
+  /* #endregion */
+  /* #endregion imagens Mao e Dedos*/
+  /* #endregion tabDedos*/
+  
+  
+  /* #endregion tabIdentify*/
+  
+  /* #region tabAccess*/
+  
+  #tabAccess {
+    color: red;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    justify-content: center;
+  }
+  
+  #tabAccessImgDevice {
+    /* background-color: aquamarine; */
+    position: absolute;
+    left: 48px;
+    top:45%;
+    max-height: 144px;
+    max-width: 205px;
+  }
+  
+  #tabAccessInfo {
+    background-color: aquamarine;
+    /* flex:1; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: ; */
+  }
+  
+  #tabAccessInfo aside {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #tabAccessInfo content {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+  }
+  
+  #tabAccesslbNome {
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    height: 40%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #tabAccesslbMsgBloqueio {
+    color: yellow;
+    font-size: 5em;
+    text-align: center;
+    height: 40%;
+    
+    /* background-color: green; */
+  }
+  
+  #tabAccesslbMensagem {
+    color: white;
+    background-color: red;
+    font-size: 5em;
+    text-align: center;
+    padding: 0.2em;
+  }
+  
+  /* #endregion tabAcess*/
+  .formline {
+    display: flex;
+    flex-direction: row !important;
+  }
+  
+  /**config menu**/
+  
+  #tabConfigMenu content {
+    /* background-color: lightsalmon; */
+    display: flex;
+    flex:1;
+    flex-direction: column;
+  }
+  
+  
+  /**config camera**/
+  #tabConfigCamera {
+    color: red;
+    display: flex;
+    flex-direction: row;
+    /* background-color: aquamarine; */
+  }
+  
+  #tabConfigCamera aside {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  
+  .video-feed {
+    flex:1;
+    display: flex;
+    flex-direction: row; 
+    padding:8;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #videoFeedImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  #tabConfigCamera content {
+    /* background-color: lightsalmon; */
+    /* padding-left:10; */
+    display: flex;
+    flex:1;
+    flex-direction: column;
+  }
+  
+  #tabConfigCamera form {
+    flex:1;
+    background-color: lightseagreen;
+    padding: 16;
+  }
+  
+  #tabConfigCamera button {
+    /* margin:8; */
+    margin:0.5em;
+    text-align: center;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 3.7em;
+    font-family: GothamBlack;
+    outline: none;
+    /* flex:1; */
+  } 
+  
+  #tabConfigCamera label {
+    color: white;
+    font-size: 1.5em;
+    
+    /* background-color: green; */
+  }
+  
+  #tabConfigCamera input[type="text"] {
+    font-family: GothamMedium;
+    height: 1.3em;
+    width: 100%;
+    margin-bottom: 0.03em;
+    font-size: 2.5em;
+    /* background-color: red; */
+    text-align: center;
+  }
+  
+  #tabConfigCamera input[type="checkbox"] {
+    /* height: 35!important; */
+    height: 1.75em;
+    flex:1;
+  }
+  
+  
+  
+  /**network**/
+  
+  #tabConfigNetwork {
+    color: red;
+    display: flex;
+    flex-direction: row;
+    /* background-color: aquamarine; */
+  }
+  
+  
+  #tabConfigNetwork aside {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  
+  #tabConfigNetwork form {
+    /* background-color: lightseagreen; */
+    padding: 16;
+  }
+  
+  #tabConfigNetwork label {
+    color: white;
+    font-size: 1.5em;
+    
+    /* background-color: green; */
+  }
+  
+  #tabConfigNetwork input[type="text"] {
+    font-family: GothamMedium;
+    height: 1.3em;
+    width: 100%;
+    margin-bottom: 0.03em;
+    font-size: 2.5em;
+    /* background-color: red; */
+    text-align: center;
+  }
+  
+  #tabConfigNetwork input[type="checkbox"] {
+    /* height: 35!important; */
+    height: 1.75em;
+    flex:1;
+  }
+  
+  #tabConfigNetwork content {
+    /* background-color: lightsalmon; */
+    display: flex;
+    flex:1;
+  }
+  
+  
+  
+  
+  #tabReentryNotAllowed {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 5em;
+  }
+  
+  /*** </CONTAINER> ***/
+  
+  /*** <FOOTER> ***/
+  
+  .footer {
+    display: flex;  
+    height: 2em;
+    width: 100%;
+    color: white;
+    /* background-color: chocolate; */
+  }
+  
+  .statusbar {
+    /* background-color: red; */
+    font-size: 1.3em;
+    flex:1;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .status-panel {
+    margin-left:5;
+    margin-right: 5;
+  
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .status-panel-server-status {
+    /* background-color: chocolate; */
+    flex:1;
+    justify-content: center;
+    align-content: center;
+    /* max-width: 30%; */
+  }
+  
+  /* .status-panel-finger-status {
+    background-color: blue;
+  } */
+  
+  /* .status-panel-finger-status {
+    background-color: red;
+  } */
+  
+  /* .status-panel-network-address {
+          background-color: red;
+        }
+  
+        .status-panel-devices-status {
+          background-color: blue;
+        }
+  
+        .status-panel-app-status {
+          background-color: green;
+        }
+        */
+       
+        /* .status-panel-server-status {
+          background-color: aqua;
+        } */
+  
+        /* .status-panel-server-hour {
+          background-color: blueviolet;
+        }  */
+        
+  /*** </FOOTER> ***/
+  
+  .input-wrong-value {
+    border-color: red !important;
+    outline-color: red !important;
+    border-width: 4px !important;
+  }
+  
+  .pgClear > .tab-page {
+    display: none !important;
+  }
+  
+  .pgClear .sub-page {
+    display: none !important;
+  }
+  
+  .pgClear #msgBottom {
+    display: none !important;
+  }
+  
+  .pgOffline > .tab-page {
+    display: none !important;
+  }
+  
+  .pgOffline .sub-page {
+    display: none !important;
+  }
+  
+  .pgOffline #tabOffline {
+    display: flex !important;
+  }
+  
+  .pgMain > .tab-page  {
+    display: none !important;
+  }
+  .pgMain .sub-page  {
+    display: none !important;
+  }
+  
+  .pgMain #tabIdentify {
+    display: flex !important;
+  }
+  
+  .pgMain #msgBottom {
+    display: none !important;
+  }
+  
+  .pgMain #keyboard {
+    display: flex !important;
+  }
+  
+  .pgTryAgain > .tab-page  {
+    display: none !important;
+  }
+  .pgTryAgain .sub-page  {
+    display: none !important;
+  }
+  
+  .pgTryAgain #tabIdentify {
+    display: flex !important;
+  }
+  
+  .pgTryAgain #tryagain {
+    display: flex !important;
+  }
+  
+  .pgTryAgain #msgBottom {
+    display: flex !important;
+  }
+  
+  /*  */
+  .pgQueryingUser > .tab-page  {
+    display: none !important;
+  }
+  .pgQueryingUser .sub-page  {
+    display: none !important;
+  }
+  
+  .pgQueryingUser #tabIdentify {
+    display: flex !important;
+  }
+  
+  .pgQueryingUser #querying {
+    display: flex !important;
+  }
+  
+  .pgQueryingUser #msgBottom {
+    display: none !important;
+  }
+  
+  /*  */
+  
+  
+  
+  .pgFingers > .tab-page {
+    display: none !important;
+  }
+  
+  .pgFingers .sub-page  {
+    display: none !important;
+  }
+  
+  .pgFingers #tabIdentify {
+    display: flex !important;
+  }
+  
+  .pgFingers #fingers {
+    display: flex !important;
+  }
+  
+  .pgFingers #msgBottom {
+    display: none !important;
+  }
+  
+  .pgFingers .finger-level {
+    opacity: 0 !important;
+  }
+  
+  .pgAccess > .tab-page {
+    display: none !important;
+  }
+  
+  .pgAccess #tabAccess {
+    display: flex !important;
+  }
+  
+  .pgIdentified > .tab-page {
+    display: none !important;
+  }
+  
+  .pgIdentified #tabSuccessfullyIdentified {
+    display: flex !important;
+  }
+  
+  
+  .pgConfigMenu > .tab-page {
+    display: none !important;
+  }
+  
+  .pgConfigMenu #tabConfigMenu {
+    display: flex !important;
+  }
+  
+  .pgConfigNetwork > .tab-page {
+    display: none !important;
+  }
+  
+  .pgConfigNetwork #tabConfigNetwork {
+    display: flex !important;
+  }
+  
+  .pgConfigCamera > .tab-page {
+    display: none !important;
+  }
+  
+  .pgConfigCamera #tabConfigCamera {
+    display: flex !important;
+  }
+  
+  .pgReentryNotAllowed > .tab-page {
+    display: none !important;
+  }
+  
+  .pgReentryNotAllowed #tabReentryNotAllowed {
+    display: flex !important;
+  }
+  
+  
