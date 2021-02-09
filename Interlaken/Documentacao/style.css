@@ -1,4 +1,4 @@
-#title-if {
+#title-API-if {
     color: blue;
     text-align: center;
 }
@@ -8,13 +8,22 @@
 }
 
 ol {
+  margin: 0.6;
+  padding: 0.6;
+  margin-bottom: 0.6em;
+}
+
+ol > li {
+  margin-bottom: 0.3em;
+}
+/* ol {
     list-style-type: none;
     counter-reset: item;
     margin: 0.6;
     padding: 0.6;
-  }
+  } */
 
-  ol > li {
+  /* ol > li {
     display: table;
     counter-increment: item;
     margin-bottom: 0.6em;
@@ -25,7 +34,7 @@ ol {
     content: counters(item, ".") ". ";
     display: table-cell;
     padding-right: 0.6em;    
-  }
+  } 
   
   /* li ol > li {
     margin: 0;
