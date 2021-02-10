@@ -1,10 +1,16 @@
+img {
+  /* float: left; */
+}
+
 #title-API-if {
     color: blue;
     text-align: center;
+    font-weight: bold;
 }
 
 .tabla-conteudo {
   color: rgba(14, 14, 138, 0.733);
+  font-size: large;
 }
 
 ol {
