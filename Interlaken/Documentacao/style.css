@@ -10,6 +10,7 @@ img {
 
 .tabla-conteudo {
   color: rgba(14, 14, 138, 0.733);
+  font: condensed 120% sans-serif;
   font-size: large;
 }
 
@@ -22,6 +23,21 @@ ol {
 ol > li {
   margin-bottom: 0.3em;
 }
+
+.apendices {
+  color: rgba(14, 14, 138, 0.733);
+  font: condensed 120% sans-serif;
+}
+
+#comunicacao-api {
+  color: rgba(14, 14, 138, 0.733);
+}
+
+.paragrafos-conteudo {
+  font: condensed 100% sans-serif;
+  margin-bottom: 0.6em;
+}
+
 /* ol {
     list-style-type: none;
     counter-reset: item;
