@@ -13,6 +13,9 @@ img {
   font: condensed 120% sans-serif;
   font-size: large;
 }
+a {
+  text-decoration: none;
+}
 
 ol {
   margin: 0.6;
@@ -22,20 +25,6 @@ ol {
 
 ol > li {
   margin-bottom: 0.3em;
-}
-
-.apendices {
-  color: rgba(14, 14, 138, 0.733);
-  font: condensed 120% sans-serif;
-}
-
-#comunicacao-api {
-  color: rgba(14, 14, 138, 0.733);
-}
-
-.paragrafos-conteudo {
-  font: condensed 100% sans-serif;
-  margin-bottom: 0.6em;
 }
 
 /* ol {
@@ -65,4 +54,47 @@ ol > li {
   li ol > li:before {
     content: counters(item, ".") " ";
   }  */
+
+.apendices {
+  color: rgba(14, 14, 138, 0.733);
+  font: condensed 120% sans-serif;
+}
+
+#comunicacao-api {
+  color: rgba(14, 14, 138, 0.733);
+}
+
+.paragrafos-conteudo {
+  font: condensed 100% sans-serif;
+  margin-bottom: 0.6em;
+}
+.paragrafos-conteudo ul{
+  font: condensed 100% sans-serif;
+  margin-bottom: 0.6em;
+}
+
+.paragrafos-conteudo ul li{
+  font: condensed 100% sans-serif;
+  margin-bottom: 0.6em;
+}
+
+#Apresentacao-rapida-dos-produtos {
+  color: rgba(14, 14, 138, 0.733);
+}
+
+#diagrama-de-fluxo {
+  color: rgba(14, 14, 138, 0.733);
+}
+
+#Instalacao {
+  color: rgba(14, 14, 138, 0.733);
+}
+
+#Download-de-arquivos {
+  color: rgba(14, 14, 138, 0.733);
+}
+
+#Instalacao-servidorIF {
+  color: rgba(14, 14, 138, 0.733);
+}
 
