@@ -1,4 +1,6 @@
 img {
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
   /* float: left; */
 }
 
@@ -98,3 +100,22 @@ ol > li {
   color: rgba(14, 14, 138, 0.733);
 }
 
+#Instalacao-IntegraFacil2 {
+  color: rgba(14, 14, 138, 0.733);
+}
+
+#Integrafacil2-linux {
+  color: rgba(14, 14, 138, 0.733);
+}
+
+#Integrafacil2-windows {
+  color: rgba(14, 14, 138, 0.733);
+}
+
+#texto-terminal {
+  font: condensed 110% liberation-mono;
+}
+
+#caif {
+  color: rgba(14, 14, 138, 0.733);
+}

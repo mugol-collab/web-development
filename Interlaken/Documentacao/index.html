@@ -28,12 +28,12 @@
                 <ol>
                     <li><a href="#Download-de-arquivos">Download de arquivos</a></li>
                     <li><a href="#Instalacao-servidorIF">Instalação servidorIF</a></li>
-                    <li>Instalação IntegraFacil2
+                    <li><a href="#Instalacao-IntegraFacil2">Instalação IntegraFacil2</a>    
 
 
                     <ol>
-                        <li>IntegraFacil2 (Linux x64)</li>
-                        <li>IntegraFacil2 (Windows x64)</li>
+                        <li><a href="#Integrafacil2-windows">IntegraFacil2 (Windows x64)</a></li>
+                        <li><a href="#Integrafacil2-linux">IntegraFacil2 (Linux x64)</a></li>
                     </ol>
                     
                     </li>
@@ -41,7 +41,7 @@
 
                 </li>    
 
-                <li>Sistema para visualização</li>
+                <li><a href="#caif">Sistema para visualização</a></li>
 
 
 
@@ -156,6 +156,92 @@
     </div>
 
     <h2 id="Instalacao-servidorIF">3.2. Instalacao-servidorIF</h2>
+
+    <div class="paragrafos-conteudo">
+
+        <ul>
+            <li>Basta descompactar a pasta descarregada </li>
+            <li>Pode ser executado como aplicativo ou como serviço</li>
+            <li>Para executar como serviço basta executar, com permissões de administrador, o script "ServidorIFService-Install.cmd"
+                <img src="./img/serviciosServidorIF.png" alt="servico ServidorIF">
+            </li>
+
+            <li>Para iniciar o serviço execute o script “ServidorIFService-Start” ou faça isso pelo painel “Serviços” do Windows</li>
+            <li>Se não quiser instalar o serviço, basta executar o software ServidorIF.exe</li>
+            <li>Para conferir que o servidor está rodando, acessar no browser a localhost:8080
+                <img src="./img/srvIF-localhost-8080.png" alt="pagina principal servidorIF">
+            </li>
+        </ul>
+
+    </div>
+
+    <h2 id="Instalacao-IntegraFacil2">3.3. Instalação IntegraFacil2</h2>
+
+    <div class="paragrafos-conteudo">
+        <h3 id="Integrafacil2-windows">3.3.1. Integrafacil2 (Windows x64)</h3>
+        <ul>
+            <li>Para configurar o integrafacil2 para ser executado na inicialização do Windows, edite o arquivos integraFacil2.ini 
+                e mude a opção [APP] autoexec= de 0 para 1
+                 
+                <img src="./img/if2-inicializacao-nao-automatica.png" alt="inicializacao nao automatica">
+                
+                <img src="./img/if2-inicializacao-automatica.png" alt="inicializacao automatica">
+            </li>
+
+            <li>integraFacil2 deve apontar ao servidorIF, esto se configura nos campos [FULTRONIC_SERVIDOR] e [DATABASE]. No caso 
+                ambos programas estejam rodando na mesma máquina o hostname será o localhost, caso estejam rodando em máquinas 
+                diferentes será a IP do servidorIF.
+                <img src="./img/if2-aponta-srvIF.png" alt="config if2-srvIF">
+            </li>
+
+            <li>Aqui se sugere conectar ao computador  o leitor Fultronic e verificar que está sendo reconhecido no gerenciador de 
+                dispositivos. Caso não, se deve instalar o driver futronic que se encontra na pasta do integraFacil2
+                
+                <img src="./img/gerenciador-dispositivos.png" alt="gerenciador dispositivos">
+            </li>
+
+            <li>Executar integraFacil2.exe como administrador 
+                <img src="./img/if2-exec-como-admin.png" alt="IF2 exec como admin">
+            
+            </li>
+
+            <li>Se abrirá uma janela com os logs de instalação e os dados do leitor conectado
+                <img src="./img/logsIF2.png" alt="logs IF2">
+            </li>
+        </ul>
+
+        <h3 id="Integrafacil2-linux">3.3.2. Integrafacil2 (Linux x64)</h3>
+        <ul>
+            <li>Basta descompactar a pasta descarregada </li>
+            <li>Acessar a pasta descompactada e execute como administrador o script de instalação
+                <p id="texto-terminal">sudo ./installer.sh</p>
+            </li>
+
+            <li>A execução do comando cria a  pasta interlaken no diretório /opt/, onde encontra-se o arquivo de configuração, 
+                config.json (este é o único arquivo a ser editado)</li>
+            <li>Para acessar basta ingressar em um terminal do sistema 
+                <ul>
+                    <li>
+                        <p id="texto-terminal">cd /opt/interlaken</p> 
+                    </li>
+                    <li>No campo “servidorIFHostname”: deve se colocar a IP da máquina onde foi instalado o servidorIF</li>
+                </ul>
+            </li>
+
+            <li>O Integrafacil2
+                <ul>
+                    <li>Utiliza a portas 8080 e 810 para se comunicar com o servidorIF</li>
+                    <li>Utiliza a porta 3050 para receber solicitações HTTP pela rede local</li>
+                    <li>Para verificar se o serviço está rodando corretamente, verifique o status do serviço com o comando 
+                        systemctl (o comando permite fazer start, stop e restart no serviços do sistema substituindo a palavra status)
+                        <p id="texto-terminal">$ sudo systemctl status integrafacil2</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h2 id="caif">3.4. Sistema para visualização</h2>
     
 </body>
 </html>
