@@ -1,2 +1,2 @@
     // Comment
-    console.log("Hello World extern");
+    console.log("Hello World extern index.js");

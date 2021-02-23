@@ -8,7 +8,7 @@
  * Are case-sensitive
  */
 
-let name = 'JuanJs';
+let name = 'JuanJ';
 console.log(name);
 
 let firstName = 'Juan';

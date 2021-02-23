@@ -10,9 +10,10 @@ function square(number){
 }
 
 // greet('Juan', 'Gomez');
-// greet('Maria', 'Navia');
+greet('Maria', 'Navia');
 
 // let number = square(2);
 // console.log(number);
 
-console.log(square(4));
+let num = 2;
+console.log("Cuadrado de " + num + " = " +  square(num));

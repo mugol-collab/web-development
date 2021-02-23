@@ -38,7 +38,7 @@ let isApproved = true;  // Boolean Literal
 let firstName = undefined;  // un tipo de null
 let selectedColor = null;   // se usa null cuando se quiere tener la opción de limpiar la variable
 
-/* Digital en la consola del navegador
+/* Digitar en la consola del navegador
    > typeof name
      "string"
    > name = 1
